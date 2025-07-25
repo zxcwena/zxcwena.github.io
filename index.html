@@ -58,6 +58,11 @@
             box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
         }
         
+        .nav-btn:hover {
+            background: var(--accent);
+            color: white;
+        }
+        
         /* Достижения (стиль Minecraft) */
         .achievements-section {
             position: fixed;
@@ -75,14 +80,39 @@
             padding: 20px;
         }
         
+        .achievements-container {
+            max-width: 600px;
+            width: 100%;
+            background: var(--minecraft-dark);
+            border: 4px solid #555;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 0 4px #333, 0 0 0 8px #222;
+        }
+        
+        .achievements-title {
+            font-family: 'Minecraft', sans-serif;
+            color: var(--minecraft-green);
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+            text-shadow: 3px 3px 0 #000;
+        }
+        
         .achievement {
             background: rgba(0, 0, 0, 0.5);
             border: 2px solid #444;
             padding: 15px;
             margin-bottom: 10px;
+            position: relative;
             display: flex;
             align-items: center;
             transition: all 0.3s;
+        }
+        
+        .achievement:hover {
+            transform: scale(1.02);
+            border-color: var(--minecraft-green);
         }
         
         .achievement-icon {
@@ -99,9 +129,144 @@
             color: gold;
         }
         
-        /* Остальные стили остаются как в предыдущем коде */
+        .achievement-text {
+            flex: 1;
+        }
         
-        /* Новые стили для отзывов */
+        .achievement-title {
+            font-family: 'Minecraft', sans-serif;
+            color: var(--minecraft-green);
+            margin-bottom: 5px;
+        }
+        
+        .close-achievements {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: #f00;
+            border: none;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            font-size: 1.2rem;
+            cursor: pointer;
+        }
+        
+        /* Основная карточка */
+        .card {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 600px;
+            overflow: hidden;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: all 0.5s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+        }
+        
+        .header {
+            background: var(--primary);
+            color: white;
+            padding: 25px;
+            text-align: center;
+            position: relative;
+        }
+        
+        .header h1 {
+            font-size: 2.2rem;
+            margin-bottom: 5px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        
+        .header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        
+        .avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 4px solid white;
+            margin: 0 auto 15px;
+            background: #dfe6e9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--primary);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .content {
+            padding: 25px;
+        }
+        
+        .info-item {
+            display: flex;
+            margin-bottom: 15px;
+            align-items: center;
+            padding: 10px;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .info-item:hover {
+            background: rgba(108, 92, 231, 0.1);
+            transform: translateX(5px);
+        }
+        
+        .info-item .number {
+            background: var(--accent);
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 15px;
+            flex-shrink: 0;
+            font-weight: bold;
+        }
+        
+        .info-item .text {
+            flex-grow: 1;
+        }
+        
+        .highlight {
+            background: var(--accent);
+            color: white;
+            padding: 2px 8px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 5px;
+        }
+        
+        .skill {
+            background: var(--secondary);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+        
+        /* Отзывы */
         .testimonial {
             background: rgba(162, 155, 254, 0.2);
             padding: 15px;
@@ -130,10 +295,83 @@
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
+        
+        .telegram-channel h3 {
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+        
+        .channel-btn {
+            display: inline-flex;
+            align-items: center;
+            background: #0088cc;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 10px;
+            transition: all 0.3s;
+        }
+        
+        .channel-btn:hover {
+            background: #0077b5;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 136, 204, 0.4);
+        }
+        
+        .channel-btn i {
+            margin-right: 8px;
+            font-size: 1.2em;
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background: var(--light);
+            margin-top: 20px;
+            border-radius: 0 0 20px 20px;
+        }
+        
+        .contact-btn {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(108, 92, 231, 0.4);
+        }
+        
+        .contact-btn:hover {
+            background: var(--accent);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(253, 121, 168, 0.6);
+        }
+        
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(253, 121, 168, 0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(253, 121, 168, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(253, 121, 168, 0); }
+        }
+        
+        @media (max-width: 500px) {
+            .header h1 { font-size: 1.8rem; }
+            .info-item { flex-direction: column; align-items: flex-start; }
+            .info-item .number { margin-bottom: 8px; margin-right: 0; }
+            .nav-menu { top: 10px; left: 10px; flex-direction: column; }
+        }
     </style>
 </head>
 <body>
-    <!-- Навигация -->
+    <!-- Навигационное меню -->
     <div class="nav-menu">
         <button class="nav-btn" id="mainBtn">Основное</button>
         <button class="nav-btn" id="achievementsBtn">Достижения</button>
@@ -165,7 +403,7 @@
                 <div class="achievement-icon"><i class="fab fa-python"></i></div>
                 <div class="achievement-text">
                     <div class="achievement-title">Python Мастер</div>
-                    <div class="achievement-desc">Полностью изучил Tkinter</div>
+                    <div class="achievement-desc">Полностью изучил Tkinter в Python</div>
                 </div>
             </div>
         </div>
@@ -180,9 +418,45 @@
         </div>
         
         <div class="content">
-            <!-- Ваши 10 пунктов остаются без изменений -->
+            <div class="info-item">
+                <div class="number">1</div>
+                <div class="text">13 лет</div>
+            </div>
             
-            <!-- Добавляем отзывы -->
+            <div class="info-item">
+                <div class="number">2</div>
+                <div class="text">Программист</div>
+            </div>
+            
+            <div class="info-item">
+                <div class="number">3</div>
+                <div class="text">Зовут <span class="highlight">Максим</span></div>
+            </div>
+            
+            <div class="info-item">
+                <div class="number">4</div>
+                <div class="text">
+                    Знаю:
+                    <div class="skills">
+                        <span class="skill">Lua (Roblox)</span>
+                        <span class="skill">Python</span>
+                        <span class="skill">HTML</span>
+                        <span class="skill">CSS</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="info-item">
+                <div class="number">5</div>
+                <div class="text">Стаж работы <span class="highlight">26 дней</span> (учился год)</div>
+            </div>
+            
+            <div class="info-item">
+                <div class="number">6</div>
+                <div class="text">Могу помогать в написании скриптов для проектов</div>
+            </div>
+            
+            <!-- Отзывы -->
             <div class="testimonial">
                 <div class="quote">"Мужик, реально помог написать крутой html с css, теперь наш сайт это просто чудо!"</div>
                 <div class="author">- ZerixSell</div>
@@ -200,6 +474,26 @@
                 <a href="https://t.me/CarnagezzHouse" class="channel-btn" target="_blank">
                     <i class="fab fa-telegram"></i> Carnagezz House
                 </a>
+            </div>
+            
+            <div class="info-item">
+                <div class="number">7</div>
+                <div class="text">Добрый, общительный</div>
+            </div>
+            
+            <div class="info-item">
+                <div class="number">8</div>
+                <div class="text">Лёгок в общении</div>
+            </div>
+            
+            <div class="info-item">
+                <div class="number">9</div>
+                <div class="text">Страна: <span class="highlight">Россия</span></div>
+            </div>
+            
+            <div class="info-item">
+                <div class="number">10</div>
+                <div class="text">Требую ЗП: <span class="highlight">от 10₽ до 50₽</span> (зависит от проекта)</div>
             </div>
         </div>
         
@@ -225,7 +519,40 @@
             document.getElementById('mainCard').style.display = 'block';
         });
 
-        // Остальной JavaScript без изменений
+        // Кнопка Telegram
+        document.getElementById('contactBtn').addEventListener('click', function() {
+            window.open('https://t.me/zxcarnagezz', '_blank');
+        });
+        
+        // Анимация пунктов при загрузке
+        document.addEventListener('DOMContentLoaded', function() {
+            const items = document.querySelectorAll('.info-item');
+            items.forEach((item, index) => {
+                setTimeout(() => {
+                    item.style.opacity = '1';
+                    item.style.transform = 'translateX(0)';
+                }, index * 100);
+                item.style.opacity = '0';
+                item.style.transform = 'translateX(-20px)';
+                item.style.transition = 'all 0.5s ease';
+            });
+            
+            // Анимация достижений при открытии
+            document.getElementById('achievementsBtn').addEventListener('click', function() {
+                setTimeout(() => {
+                    const achievements = document.querySelectorAll('.achievement');
+                    achievements.forEach((ach, i) => {
+                        setTimeout(() => {
+                            ach.style.opacity = '1';
+                            ach.style.transform = 'translateY(0)';
+                        }, i * 200);
+                        ach.style.opacity = '0';
+                        ach.style.transform = 'translateY(20px)';
+                        ach.style.transition = 'all 0.5s ease';
+                    });
+                }, 100);
+            });
+        });
     </script>
 </body>
 </html>
