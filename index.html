@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Minecraft&display=swap');
         
         :root {
             --primary: #6c5ce7;
@@ -15,8 +14,6 @@
             --accent: #fd79a8;
             --dark: #2d3436;
             --light: #f5f6fa;
-            --minecraft-green: #7CFC00;
-            --minecraft-dark: #2D2D2D;
         }
         
         * {
@@ -34,126 +31,8 @@
             align-items: center;
             padding: 20px;
             color: var(--dark);
-            position: relative;
         }
         
-        /* Навигация */
-        .nav-menu {
-            position: fixed;
-            top: 20px;
-            left: 20px;
-            z-index: 100;
-            display: flex;
-            gap: 10px;
-        }
-        
-        .nav-btn {
-            background: rgba(255, 255, 255, 0.9);
-            border: none;
-            padding: 8px 15px;
-            border-radius: 20px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: all 0.3s;
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
-        }
-        
-        .nav-btn:hover {
-            background: var(--accent);
-            color: white;
-        }
-        
-        /* Достижения (стиль Minecraft) */
-        .achievements-section {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.9);
-            z-index: 90;
-            display: none;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            padding: 20px;
-        }
-        
-        .achievements-container {
-            max-width: 600px;
-            width: 100%;
-            background: var(--minecraft-dark);
-            border: 4px solid #555;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 0 0 4px #333, 0 0 0 8px #222;
-        }
-        
-        .achievements-title {
-            font-family: 'Minecraft', sans-serif;
-            color: var(--minecraft-green);
-            text-align: center;
-            margin-bottom: 20px;
-            font-size: 1.8rem;
-            text-shadow: 3px 3px 0 #000;
-        }
-        
-        .achievement {
-            background: rgba(0, 0, 0, 0.5);
-            border: 2px solid #444;
-            padding: 15px;
-            margin-bottom: 10px;
-            position: relative;
-            display: flex;
-            align-items: center;
-            transition: all 0.3s;
-        }
-        
-        .achievement:hover {
-            transform: scale(1.02);
-            border-color: var(--minecraft-green);
-        }
-        
-        .achievement-icon {
-            width: 40px;
-            height: 40px;
-            background: #8B8B8B;
-            border: 2px solid #333;
-            margin-right: 15px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-family: 'Minecraft', sans-serif;
-            font-size: 1.5rem;
-            color: gold;
-        }
-        
-        .achievement-text {
-            flex: 1;
-        }
-        
-        .achievement-title {
-            font-family: 'Minecraft', sans-serif;
-            color: var(--minecraft-green);
-            margin-bottom: 5px;
-        }
-        
-        .close-achievements {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            background: #f00;
-            border: none;
-            color: white;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            font-size: 1.2rem;
-            cursor: pointer;
-        }
-        
-        /* Основная карточка */
         .card {
             background: rgba(255, 255, 255, 0.9);
             border-radius: 20px;
@@ -162,7 +41,6 @@
             max-width: 600px;
             overflow: hidden;
             position: relative;
-            transform-style: preserve-3d;
             transition: all 0.5s ease;
         }
         
@@ -266,65 +144,6 @@
             font-weight: bold;
         }
         
-        /* Отзывы */
-        .testimonial {
-            background: rgba(162, 155, 254, 0.2);
-            padding: 15px;
-            border-radius: 10px;
-            margin: 15px 0;
-            border-left: 4px solid var(--accent);
-        }
-        
-        .testimonial .quote {
-            font-style: italic;
-            margin-bottom: 5px;
-        }
-        
-        .testimonial .author {
-            font-weight: bold;
-            text-align: right;
-            color: var(--primary);
-        }
-        
-        /* Telegram-канал */
-        .telegram-channel {
-            text-align: center;
-            margin: 20px 0;
-            padding: 15px;
-            background: rgba(255, 255, 255, 0.8);
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        
-        .telegram-channel h3 {
-            color: var(--primary);
-            margin-bottom: 10px;
-        }
-        
-        .channel-btn {
-            display: inline-flex;
-            align-items: center;
-            background: #0088cc;
-            color: white;
-            padding: 10px 20px;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: bold;
-            margin-top: 10px;
-            transition: all 0.3s;
-        }
-        
-        .channel-btn:hover {
-            background: #0077b5;
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0, 136, 204, 0.4);
-        }
-        
-        .channel-btn i {
-            margin-right: 8px;
-            font-size: 1.2em;
-        }
-        
         .footer {
             text-align: center;
             padding: 20px;
@@ -366,51 +185,11 @@
             .header h1 { font-size: 1.8rem; }
             .info-item { flex-direction: column; align-items: flex-start; }
             .info-item .number { margin-bottom: 8px; margin-right: 0; }
-            .nav-menu { top: 10px; left: 10px; flex-direction: column; }
         }
     </style>
 </head>
 <body>
-    <!-- Навигационное меню -->
-    <div class="nav-menu">
-        <button class="nav-btn" id="mainBtn">Основное</button>
-        <button class="nav-btn" id="achievementsBtn">Достижения</button>
-    </div>
-    
-    <!-- Секция достижений -->
-    <div class="achievements-section" id="achievementsSection">
-        <button class="close-achievements" id="closeAchievements">&times;</button>
-        <div class="achievements-container">
-            <h2 class="achievements-title">ДОСТИЖЕНИЯ</h2>
-            
-            <div class="achievement">
-                <div class="achievement-icon">$</div>
-                <div class="achievement-text">
-                    <div class="achievement-title">Первые деньги</div>
-                    <div class="achievement-desc">Заработал первые 30 рублей</div>
-                </div>
-            </div>
-            
-            <div class="achievement">
-                <div class="achievement-icon"><i class="fas fa-code"></i></div>
-                <div class="achievement-text">
-                    <div class="achievement-title">Верстальщик</div>
-                    <div class="achievement-desc">Изучил HTML и CSS в 2024 году</div>
-                </div>
-            </div>
-            
-            <div class="achievement">
-                <div class="achievement-icon"><i class="fab fa-python"></i></div>
-                <div class="achievement-text">
-                    <div class="achievement-title">Python Мастер</div>
-                    <div class="achievement-desc">Полностью изучил Tkinter в Python</div>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <!-- Основная карточка -->
-    <div class="card" id="mainCard">
+    <div class="card">
         <div class="header">
             <div class="avatar">M</div>
             <h1>Ищу работу!</h1>
@@ -456,26 +235,6 @@
                 <div class="text">Могу помогать в написании скриптов для проектов</div>
             </div>
             
-            <!-- Отзывы -->
-            <div class="testimonial">
-                <div class="quote">"Мужик, реально помог написать крутой html с css, теперь наш сайт это просто чудо!"</div>
-                <div class="author">- ZerixSell</div>
-            </div>
-            
-            <div class="testimonial">
-                <div class="quote">"Пацан реально хорош, очень сильно помог с написанием скриптов для моего плейса в роблокс!"</div>
-                <div class="author">- Grizli1489</div>
-            </div>
-            
-            <!-- Telegram-канал -->
-            <div class="telegram-channel">
-                <h3>Мой Telegram-канал</h3>
-                <p>Подпишитесь, чтобы следить за моими проектами!</p>
-                <a href="https://t.me/CarnagezzHouse" class="channel-btn" target="_blank">
-                    <i class="fab fa-telegram"></i> Carnagezz House
-                </a>
-            </div>
-            
             <div class="info-item">
                 <div class="number">7</div>
                 <div class="text">Добрый, общительный</div>
@@ -503,23 +262,6 @@
     </div>
 
     <script>
-        // Навигация между разделами
-        document.getElementById('achievementsBtn').addEventListener('click', function() {
-            document.getElementById('achievementsSection').style.display = 'flex';
-            document.getElementById('mainCard').style.display = 'none';
-        });
-        
-        document.getElementById('mainBtn').addEventListener('click', function() {
-            document.getElementById('achievementsSection').style.display = 'none';
-            document.getElementById('mainCard').style.display = 'block';
-        });
-        
-        document.getElementById('closeAchievements').addEventListener('click', function() {
-            document.getElementById('achievementsSection').style.display = 'none';
-            document.getElementById('mainCard').style.display = 'block';
-        });
-
-        // Кнопка Telegram
         document.getElementById('contactBtn').addEventListener('click', function() {
             window.open('https://t.me/zxcarnagezz', '_blank');
         });
@@ -535,22 +277,6 @@
                 item.style.opacity = '0';
                 item.style.transform = 'translateX(-20px)';
                 item.style.transition = 'all 0.5s ease';
-            });
-            
-            // Анимация достижений при открытии
-            document.getElementById('achievementsBtn').addEventListener('click', function() {
-                setTimeout(() => {
-                    const achievements = document.querySelectorAll('.achievement');
-                    achievements.forEach((ach, i) => {
-                        setTimeout(() => {
-                            ach.style.opacity = '1';
-                            ach.style.transform = 'translateY(0)';
-                        }, i * 200);
-                        ach.style.opacity = '0';
-                        ach.style.transform = 'translateY(20px)';
-                        ach.style.transition = 'all 0.5s ease';
-                    });
-                }, 100);
             });
         });
     </script>
