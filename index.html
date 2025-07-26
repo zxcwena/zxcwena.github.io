@@ -144,6 +144,45 @@
             font-weight: bold;
         }
         
+        /* Стили для Telegram-канала */
+        .telegram-channel {
+            text-align: center;
+            margin: 20px 0;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .telegram-channel h3 {
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+        
+        .channel-btn {
+            display: inline-flex;
+            align-items: center;
+            background: #0088cc;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 10px;
+            transition: all 0.3s;
+        }
+        
+        .channel-btn:hover {
+            background: #0077b5;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 136, 204, 0.4);
+        }
+        
+        .channel-btn i {
+            margin-right: 8px;
+            font-size: 1.2em;
+        }
+        
         .footer {
             text-align: center;
             padding: 20px;
@@ -193,7 +232,7 @@
         <div class="header">
             <div class="avatar">M</div>
             <h1>Ищу работу!</h1>
-            <p>Юный программист</p>
+            <p>Юный программист с амбициями</p>
         </div>
         
         <div class="content">
@@ -233,6 +272,15 @@
             <div class="info-item">
                 <div class="number">6</div>
                 <div class="text">Могу помогать в написании скриптов для проектов</div>
+            </div>
+            
+            <!-- Добавляем раздел с Telegram-каналом -->
+            <div class="telegram-channel">
+                <h3>Мой Telegram-канал</h3>
+                <p>Подпишитесь, чтобы следить за моими проектами!</p>
+                <a href="https://t.me/CarnagezzHouse" class="channel-btn" target="_blank">
+                    <i class="fab fa-telegram"></i> Carnagezz House
+                </a>
             </div>
             
             <div class="info-item">
