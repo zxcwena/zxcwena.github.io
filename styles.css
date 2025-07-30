@@ -1,0 +1,216 @@
+:root {
+    --primary: #6c5ce7;
+    --secondary: #a29bfe;
+    --accent: #fd79a8;
+    --dark: #2d3436;
+    --light: #f5f6fa;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    color: var(--dark);
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 600px;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.5s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+.header {
+    background: var(--primary);
+    color: white;
+    padding: 25px;
+    text-align: center;
+    position: relative;
+}
+
+.header h1 {
+    font-size: 2.2rem;
+    margin-bottom: 5px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.header p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+.avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 4px solid white;
+    margin: 0 auto 15px;
+    background: #dfe6e9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.content {
+    padding: 25px;
+}
+
+.info-item {
+    display: flex;
+    margin-bottom: 15px;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.info-item:hover {
+    background: rgba(108, 92, 231, 0.1);
+    transform: translateX(5px);
+}
+
+.info-item .number {
+    background: var(--accent);
+    color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
+    flex-shrink: 0;
+    font-weight: bold;
+}
+
+.info-item .text {
+    flex-grow: 1;
+}
+
+.highlight {
+    background: var(--accent);
+    color: white;
+    padding: 2px 8px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 5px;
+}
+
+.skill {
+    background: var(--secondary);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.telegram-channel {
+    text-align: center;
+    margin: 20px 0;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.telegram-channel h3 {
+    color: var(--primary);
+    margin-bottom: 10px;
+}
+
+.channel-btn {
+    display: inline-flex;
+    align-items: center;
+    background: #0088cc;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 10px;
+    transition: all 0.3s;
+}
+
+.channel-btn:hover {
+    background: #0077b5;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 136, 204, 0.4);
+}
+
+.channel-btn i {
+    margin-right: 8px;
+    font-size: 1.2em;
+}
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    background: var(--light);
+    margin-top: 20px;
+    border-radius: 0 0 20px 20px;
+}
+
+.contact-btn {
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(108, 92, 231, 0.4);
+}
+
+.contact-btn:hover {
+    background: var(--accent);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(253, 121, 168, 0.6);
+}
+
+.pulse {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(253, 121, 168, 0.7); }
+    70% { box-shadow: 0 0 0 10px rgba(253, 121, 168, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(253, 121, 168, 0); }
+}
+
+@media (max-width: 500px) {
+    .header h1 { font-size: 1.8rem; }
+    .info-item { flex-direction: column; align-items: flex-start; }
+    .info-item .number { margin-bottom: 8px; margin-right: 0; }
+  }
