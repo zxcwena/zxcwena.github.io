@@ -23,6 +23,7 @@ body {
     color: var(--dark);
 }
 
+/* Мобильный дизайн (по умолчанию) */
 .card {
     background: rgba(255, 255, 255, 0.9);
     border-radius: 20px;
@@ -209,8 +210,69 @@ body {
     100% { box-shadow: 0 0 0 0 rgba(253, 121, 168, 0); }
 }
 
+/* Десктопный дизайн (только для экранов шире 768px) */
+@media (min-width: 768px) {
+    .card {
+        max-width: 800px;
+        display: flex;
+        flex-direction: row;
+        min-height: 500px;
+    }
+    
+    .header {
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 40px;
+    }
+    
+    .content {
+        width: 60%;
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .avatar {
+        width: 150px;
+        height: 150px;
+        font-size: 4rem;
+        margin-bottom: 30px;
+    }
+    
+    .header h1 {
+        font-size: 2.5rem;
+    }
+    
+    .header p {
+        font-size: 1.3rem;
+    }
+    
+    .info-item {
+        margin-bottom: 20px;
+    }
+    
+    .info-item .number {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+    
+    .skill {
+        font-size: 0.9rem;
+        padding: 7px 14px;
+    }
+    
+    .contact-btn {
+        padding: 15px 40px;
+        font-size: 1.1rem;
+    }
+}
+
 @media (max-width: 500px) {
     .header h1 { font-size: 1.8rem; }
     .info-item { flex-direction: column; align-items: flex-start; }
     .info-item .number { margin-bottom: 8px; margin-right: 0; }
-  }
+}
